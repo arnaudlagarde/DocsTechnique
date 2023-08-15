@@ -1,41 +1,32 @@
-Documentation Technique : Automatisation d'une Commande sous Linux
+# Documentation Technique : Automatisation de la Commande SSL sous Linux
 
-Note : Cette documentation détaille les étapes pour automatiser l'exécution d'une commande en utilisant un script shell sous Linux.
+L'automatisation de la commande SSL avec Let's Encrypt permet d'obtenir et de renouveler automatiquement des certificats SSL pour sécuriser vos sites web. Voici comment automatiser la commande SSL sous Linux :
 
-Automatisation d'une Commande à l'aide d'un Script Shell
-L'automatisation de l'exécution d'une commande sous Linux peut être accomplie en créant un script shell. Un script shell est un fichier texte contenant une série de commandes que le système exécutera de manière séquentielle. Voici comment créer un script shell pour automatiser une commande :
+## Prérequis
 
-Étape 1 : Choix de l'Éditeur de Texte
-Utilisez un éditeur de texte tel que nano, vim ou gedit pour créer votre script. Par exemple, pour créer un script nommé "automate.sh" avec nano, utilisez la commande :
+- Un serveur web (par exemple, Apache ou Nginx) déjà installé et configuré.
+- Le système d'exploitation doit être pris en charge par Certbot (Let's Encrypt).
 
-bash
-nano automate.sh
-Étape 2 : Écriture du Script
-Dans l'éditeur de texte, écrivez les commandes que vous souhaitez automatiser, en les séparant par des sauts de ligne. Par exemple, pour automatiser la création d'un répertoire et la copie d'un fichier, le script pourrait ressembler à ceci :
+## Étape 1 : Installation de Certbot
 
-bash
-#!/bin/bash
+Certbot est un outil permettant d'automatiser l'obtention et le renouvellement des certificats SSL Let's Encrypt. Installez-le en utilisant les commandes suivantes :
+```bash
+sudo apt update
+sudo apt install certbot
+```
+## Étape 2 : Automatisation de la Commande SSL
+Utilisez Certbot pour automatiser l'obtention d'un certificat SSL. La commande ci-dessous lancera le processus interactif pour configurer le certificat :
+```bash
+sudo certbot --apache
+```
+Suivez les instructions pour choisir les domaines à sécuriser et configurez les options de redirection et de préférences.
 
-# Création du répertoire
-mkdir /chemin/du/nouveau/repertoire
+Certbot configurera automatiquement les fichiers de configuration de votre serveur web et renouvellera les certificats avant leur expiration.
 
-# Copie du fichier
-cp /chemin/source/fichier.txt /chemin/du/nouveau/repertoire/
-Assurez-vous de remplacer les chemins et les commandes par ceux spécifiques à votre cas.
+## Étape 3 : Validation et Test
+Après l'automatisation, testez la renouvellement automatique en exécutant la commande :
+```bash
+sudo certbot renew --dry-run
+```
 
-Étape 3 : Enregistrement et Fermeture de l'Éditeur
-Une fois que vous avez écrit le script, enregistrez-le et fermez l'éditeur de texte.
-
-Étape 4 : Attribution des Permissions d'Exécution
-Rendez le script exécutable en attribuant les permissions appropriées avec la commande :
-
-bash
-Copy code
-chmod +x automate.sh
-Étape 5 : Exécution du Script
-Pour exécuter le script, utilisez la commande :
-
-bash
-Copy code
-./automate.sh
-Le script sera exécuté, et les commandes à l'intérieur seront automatisées selon les instructions que vous avez fournies.
+Cette commande simule le renouvellement et permet de s'assurer que le processus fonctionne correctement.
