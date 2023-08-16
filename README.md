@@ -22,6 +22,27 @@ Ce référentiel contient une série de documentations techniques pour diverses 
 6. [Automatisation de la Commande SSL sous Linux](./automate-ssl-command.md)
     - Instructions sur l'utilisation de Certbot pour automatiser l'obtention et le renouvellement de certificats SSL.
 
+### Communication Automatisée entre Serveur 1 et Serveur 2 avec OpenSSH
+
+Apprenez à établir une communication automatisée entre deux serveurs en utilisant OpenSSH. Cette documentation explique les étapes pour configurer l'authentification sans mot de passe et automatiser l'exécution de commandes entre les serveurs.
+
+[Consulter la Documentation](./communication-automatisee-openssh.md)
+
+## Cheat Sheets
+
+### Cheat Sheet : Commandes Linux Courantes et Importantes
+
+Une "cheat sheet" regroupant les commandes Linux les plus courantes et importantes, utiles pour la navigation, la gestion des fichiers, les processus, le réseau et plus encore.
+
+[Consulter la Cheat Sheet](./cheat-sheet-commandes-linux.md)
+
+### Cheat Sheet : Commandes Linux Avancées
+
+Une "cheat sheet" pour les commandes Linux plus avancées, couvrant la manipulation de texte, la gestion des disques, la compression, les services, la surveillance système et plus encore.
+
+[Consulter la Cheat Sheet](./cheat-sheet-commandes-linux-avancees.md)
+
+
 ## Comment Utiliser
 
 Chaque documentation technique est disponible dans un fichier Markdown distinct. Cliquez sur les liens ci-dessus pour accéder aux guides complets.
