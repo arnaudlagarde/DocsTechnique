@@ -21,6 +21,8 @@ Ce référentiel contient une série de documentations techniques pour diverses 
 
 6. [Automatisation de la Commande SSL sous Linux](./automate-ssl-command.md)
     - Instructions sur l'utilisation de Certbot pour automatiser l'obtention et le renouvellement de certificats SSL.
+    
+7. - [Utilisation Avancée de Docker](./documentation-docker-avancee.md) : Apprenez à maîtriser Docker avec des commandes essentielles, manipulation des conteneurs, exécution, redémarrage, et plus encore.
 
 ### Communication Automatisée entre Serveur 1 et Serveur 2 avec OpenSSH
 
